@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import Enquire from "./components/Enquire";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import { Route, Routes } from 'react-router-dom';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Laminates from "./pages/Laminates";
+import Plywood from "./pages/Plywood";
+import Contacts from "./pages/Contacts";
+import Gallary from "./pages/Gallary";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -30,6 +37,14 @@ function App() {
   return (
     <>
       <Navbar setNavToggle={setNavToggle} isMobile={isMobile} />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/laminates" element={<Laminates/>} />
+        <Route path="/plywood" element={<Plywood/>} />
+        <Route path="/contact" element={<Contacts/>} />
+        <Route path="/gallery" element={<Gallary/>} />
+      </Routes>
       <Enquire navToggle={navToggle} />
       {navToggle && <Sidebar setNavToggle={setNavToggle} />}
     </>

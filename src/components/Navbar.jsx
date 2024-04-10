@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import logo from "../assets/logo.png";
 import menu_logo from "../assets/menu_logo.png";
+import { Link } from "react-router-dom";
 
 export default function Navbar({ setNavToggle, isMobile }) {
   let logoItem = useRef(null);
@@ -21,7 +22,7 @@ export default function Navbar({ setNavToggle, isMobile }) {
         >
           <div id="logo" className="flex items-center gap-0">
             {/* <img src={logo} alt="logo" className="h-12  " /> */}
-            <p className="font-bold">OM PLYWOODS</p>
+            <Link to="/" className="font-bold">OM PLYWOODS</Link>
           </div>
           {isMobile && <NavLinks />}
           {!isMobile && <MenuIcon setNavToggle={setNavToggle} />}
@@ -36,22 +37,16 @@ function NavLinks() {
     <>
       <ul className="flex gap-5 ">
         <li>
-          <a href="#">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
         <li>
-          <a href="#">Collections</a>
+          <Link to="/laminates">Collections</Link>
         </li>
         <li>
-          <a href="#">Experience</a>
+          <Link to="/gallery">Gallary</Link>
         </li>
         <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Gallary</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </>
