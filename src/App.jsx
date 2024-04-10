@@ -22,13 +22,10 @@ function App() {
         setIsMobile(false);
       }
     };
-
     // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
     // Initial check for window width
     handleResize();
-
     // Cleanup function to remove event listener
     return () => {
       window.removeEventListener("resize", handleResize);

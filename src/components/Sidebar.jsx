@@ -22,12 +22,6 @@ export default function Sidebar({ setNavToggle }) {
               <a href="#">Collections</a>
             </li>
             <li>
-              <a href="#">Experience</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
               <a href="#">Gallary</a>
             </li>
             <li>

@@ -15,14 +15,16 @@ export default function Navbar({ setNavToggle, isMobile }) {
 
   return (
     <>
-      <nav className="border-b-2 border-[#BC6C25] ">
+      <nav className="border-b-2 border-[#BC6C25] sticky top-0">
         <div
           id="navbar"
           className="bg-transparent h-14 flex justify-between px-5 items-center"
         >
           <div id="logo" className="flex items-center gap-0">
             {/* <img src={logo} alt="logo" className="h-12  " /> */}
-            <Link to="/" className="font-bold">OM PLYWOODS</Link>
+            <Link to="/" className="font-bold">
+              OM PLYWOODS
+            </Link>
           </div>
           {isMobile && <NavLinks />}
           {!isMobile && <MenuIcon setNavToggle={setNavToggle} />}
@@ -40,13 +42,19 @@ function NavLinks() {
           <Link to="/about">About Us</Link>
         </li>
         <li>
-          <Link to="/laminates">Collections</Link>
+          <a href="#">Collections</a>
         </li>
         <li>
-          <Link to="/gallery">Gallary</Link>
+          <a href="#">Experience</a>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Gallary</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
         </li>
       </ul>
     </>
