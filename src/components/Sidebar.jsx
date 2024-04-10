@@ -1,4 +1,6 @@
 import close_logo from "../assets/close_logo.png";
+import { Link } from "react-router-dom";
+
 export default function Sidebar({ setNavToggle }) {
   return (
     <>
@@ -16,16 +18,16 @@ export default function Sidebar({ setNavToggle }) {
               />
             </li>
             <li>
-              <a href="#">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
               <a href="#">Collections</a>
             </li>
             <li>
-              <a href="#">Gallary</a>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

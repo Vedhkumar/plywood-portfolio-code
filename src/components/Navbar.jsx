@@ -45,16 +45,10 @@ function NavLinks() {
           <a href="#">Collections</a>
         </li>
         <li>
-          <a href="#">Experience</a>
+          <Link to="/gallery">Gallery</Link>
         </li>
         <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Gallary</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </>
