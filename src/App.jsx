@@ -9,6 +9,7 @@ import Laminates from "./pages/Laminates";
 import Plywood from "./pages/Plywood";
 import Contacts from "./pages/Contacts";
 import Gallary from "./pages/Gallary";
+import Footer from "./components/Footer";
 
 function App() {
   const [navToggle, setNavToggle] = useState(false);
@@ -45,6 +46,7 @@ function App() {
       </Routes>
       {navToggle && <Sidebar setNavToggle={setNavToggle} />}
       <Enquire navToggle={navToggle} />
+      <Footer />
     </>
   );
 }

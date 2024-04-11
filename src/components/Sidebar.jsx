@@ -1,4 +1,6 @@
 import close_logo from "../assets/close_logo.png";
+import arrow_down from "../assets/arrow-down-logo.png";
+
 import { Link } from "react-router-dom";
 
 export default function Sidebar({ setNavToggle }) {
@@ -21,7 +23,12 @@ export default function Sidebar({ setNavToggle }) {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <a href="#">Collections</a>
+              <div className="flex items-center gap-1.5 hover:cursor-pointer">
+                Collections{" "}
+                <span>
+                  <img className="h-3 pt-0.5" src={arrow_down} alt="" />
+                </span>
+              </div>
             </li>
             <li>
               <Link to="/gallery">Gallery</Link>
